@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SurveyForm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+        <div>
+            <h1 id="title" class="title">Servey Form</h1>
+        </div>
+        <form id="serveyform">
+            <p id="description">Let us know how we can improve freeCodeCamp</p>
+            <div class="row">
+                <label for="name" class="label-for-input">* Name: </label>
+                <input type="text" placeholder="Enter your name" id="name"  class="input-data">
+            </div>
+            <div class="row">
+                <label for="email" class="label-for-input">* Email: </label>
+                <input type="email" placeholder="Enter your Email" id="email"  class="input-data">
+            </div>
+            <div class="row">
+                <label for="age" class="label-for-input">* Age: </label>
+                <input type="number" placeholder="Age" id="email"  class="input-data">
+            </div>
+            <div class="row">
+                <label for="dropdown" class="label-for-input">Which option best describes your current role? </label>
+                <select id="dropdown" name="job-select" class="dropdown">
+                    <option disabled="" value="">Select an option</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                    </select>
+            </div>
+            <div class="row">
+                <label for="recommend" class="label-for-input">How likely is that you would recommend freeCodeCamp to a friend? </label>
+                <ul id="recommend">
+                    <li>
+                        <label for="" class="text-recommend">
+                            Definitely
+                            <input type="radio" name="radio-button" class="select-recommend">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="" class="text-recommend">
+                            Maybe
+                            <input type="radio" name="radio-button" class="select-recommend">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="" class="text-recommend">
+                            Not sure
+                            <input type="radio" name="radio-button" class="select-recommend">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label for="dropdown" class="label-for-input">What do you like most in FCC:</label>
+                <select id="dropdown" name="job-select" class="dropdown">
+                    <option disabled="" value="" selected>Select an option</option>
+                    <option value="fontend">Front-end Projects</option>
+                    <option value="backend">Back-end Projects</option>
+                    <option value="datavisualizetion">Data Visualization</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="gitterhelprooms">Gitter help rooms</option>
+                    <option value="videos">Videos</option>
+                    <option value="citymeetups">City Meetups</option>
+                    <option value="wiki">Wiki</option>
+                    <option value="forum">Forum</option>
+                    <option value="additionalcourses">Additional Courses</option>
+                    </select>
+            </div>
+            <div class="row">
+                <label for="suggestions" class="label-for-input" >Any Comments or Suggestions?</label>
+                <textarea name="suggestions" id="suggestions"  placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary" id="submit">Submit</button>
+            </div>
+
+        </form>
+</body>
+</html>

@@ -1,0 +1,80 @@
+html, body{
+    background-color:  #a9d7d1;
+    font-family: 'Raleway', Helvetica, sans-serif;
+    text-align: center;
+}
+
+.title{
+    font-weight: bold;
+}
+
+#serveyform{
+    text-align: center;
+    border: black;
+    border-color: black;
+    width: 75%;
+    margin: 0 auto;
+    background-color: #f3f2f5;
+    border-radius: 5px;
+}
+
+#description{
+    padding: 30px;
+    font-size: 18px;
+}
+
+.label-for-input{
+    padding: 10px;
+    font-weight: unset;
+    font-size: 16px;
+}
+
+.input-data{
+    padding: 5px;
+    margin: 10px;
+    max-width: 350px;
+    width: 250px;
+    border-radius: 3px;
+    border: 1px solid #524d5c;
+}
+
+.row{
+    background-color: red;
+    margin-top: 10px;
+}
+
+.dropdown{
+    padding: 5px;
+    margin: 10px;
+    max-width: 350px;
+    width: 250px;
+    border-radius: 3px;
+    border: 1px solid #524d5c;
+    font-weight: unset;
+    height: 35px;
+    padding: 5px;
+}
+
+.select-recommend{
+    float: left;
+    margin-right: 10px;
+}
+
+.text-recommend{
+    font-weight: unset;
+}
+
+#suggestions{
+    padding: 5px;
+    margin: 10px;
+    max-width: 350px;
+    width: 250px;
+    border-radius: 3px;
+    border: 1px solid #524d5c;
+    font-size: 13px;
+}
+
+#submit{
+    font-size: 16px;
+    width: 80px;
+}
