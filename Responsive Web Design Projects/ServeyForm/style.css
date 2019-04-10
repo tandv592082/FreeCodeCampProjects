@@ -16,6 +16,7 @@ html, body{
     margin: 0 auto;
     background-color: #f3f2f5;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 #description{
@@ -23,23 +24,43 @@ html, body{
     font-size: 18px;
 }
 
-.label-for-input{
+.labels{
     padding: 10px;
     font-weight: unset;
     font-size: 16px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin-top:5px;
 }
+
+
+label{
+    font-weight: unset; 
+}
+.half{
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+}
+
+ul {
+    list-style-type: none;
+  }
 
 .input-data{
     padding: 5px;
     margin: 10px;
     max-width: 350px;
     width: 250px;
+    height: 20px;
     border-radius: 3px;
     border: 1px solid #524d5c;
+
 }
 
 .row{
-    background-color: red;
     margin-top: 10px;
 }
 
@@ -76,5 +97,20 @@ html, body{
 
 #submit{
     font-size: 16px;
-    width: 80px;
+    width: 100px;
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #59ace0;
+    border: 1px solid #524d5c;
+    margin-bottom: 20px;
+}
+
+.radio, .checkbox{
+    position: relative;
+    left: -40px;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+    
 }
