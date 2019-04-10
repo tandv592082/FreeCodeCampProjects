@@ -80,7 +80,7 @@ html, body{
     background-color: yellow;
     font-weight: bold;
     font-size: 17px;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 10px;
     border: 0;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -216,5 +216,17 @@ html, body{
         flex-direction: column;
         margin: 0 auto;
         align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .icon{
+        display: none !important;
+    }
+    .labels{
+        text-align: center;
+    }
+    .explain{
+        text-align: center;
     }
   }
