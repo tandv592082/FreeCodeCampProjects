@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./style.css">
     <!-- Latest compiled and minified CSS -->
+    <script src="./bundle.js"></script>
 </head>
 <body>
         <div>
             <h1 id="title" class="title">Servey Form</h1>
         </div>
-        <form id="serveyform">
+        <form id="serveyform" actions="submit">
             <p id="description">Let us know how we can improve freeCodeCamp</p>
             <div class="row">
                 <div class="labels">
-                    <label for="name">* Name: </label>
+                    <label for="name" id="name-label">* Name: </label>
                 </div>
                 <div class="half">
                     <input required type="text" placeholder="Enter your name" id="name"  class="input-data">
@@ -25,7 +26,7 @@
             </div>
             <div class="row">
                 <div class="labels">
-                        <label for="email">* Email: </label>
+                        <label for="email" id="email-label">* Email: </label>
                 </div>
                 <div class="half">
                         <input required type="email" placeholder="Enter your Email" id="email"  class="input-data">
@@ -33,10 +34,10 @@
             </div>
             <div class="row">
                 <div class="labels">
-                        <label for="age">* Age: </label>
+                        <label for="age" id="number-label">* Age: </label>
                 </div>
                 <div class="half">
-                        <input required type="number" placeholder="Age" id="email"  class="input-data">
+                        <input required type="number" placeholder="Age" id="number" min="5" max="70" class="input-data">
                 </div>
             </div>
             <div class="row">
