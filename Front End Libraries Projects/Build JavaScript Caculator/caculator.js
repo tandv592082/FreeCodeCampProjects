@@ -1,16 +1,44 @@
 let deleteScreenResult = () => {
-    document.getElementById('textview').value = '0';
+    let arr = document.querySelectorAll("[id='textview']");
+    arr[0].value = ''
 };
 
+let start = true;
 let deleteScreenNum = () => {
-    document.getElementsByClassName('number-input').value = '0';
+    let arr = document.querySelectorAll("[id='textview']");
+    arr[1].value = '0'
 }
 
 let deleteAll = () => {
     deleteScreenNum();
     deleteScreenResult();
+    start = true;
 }
 
+let next = false;
+let insert = (num) => {
+    let arr = document.querySelectorAll("[id='textview']");
+    arr[0].value += num;
+    if(start){
+        arr[1].value = num;
+    }
+    else{
+        if(num === '+' || num === '-' ||num === '*' ||num === '/'){
+            arr[1].value = num;
+            next = true;
+        }
+        else{
+            if(next){
+                arr[1].value = num;
+            }
+            else{
+                arr[1].value += num;
+            }
+            next = false;
+        }
+    }
+    
+}
 
 let handler = (str) => {
     let last = str.charAt(str.length - 1);
