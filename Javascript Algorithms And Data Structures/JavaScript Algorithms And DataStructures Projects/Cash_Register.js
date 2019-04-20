@@ -4,7 +4,7 @@ function checkCashRegister(price, cash, cid) {
         {name: 'NICKEL', value: 0.05},
         {name: 'DIME', value: 0.1},
         {name: 'QUARTER', value: 0.25},
-        {name: 'DOLLAR', value: 1},
+        {name: 'ONE', value: 1},
         {name: 'FIVE', value: 5},
         {name: 'TEN', value: 10},
         {name: 'TWENTY', value: 20},

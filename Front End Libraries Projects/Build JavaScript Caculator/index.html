@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Caculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:400' rel='stylesheet' type='text/css'>
+    <script src="./caculator.js"></script>
+</head>
+<body>
+    <div id="caculator">
+        <div class="main" >
+            <div id="display">
+                    <input  name="textview" id="textview" value="000" class="result">
+                    <input  name="textview" id="textview" value="070" class="number-input">
+            </div>
+            <div id="button-caculator">
+                <div class="col">
+                    <div class="row">
+                        <input onclick = deleteAll() type="button" value="AC" class="ac">
+                    </div>
+                    <div class="row">
+                        <div class="sub-row">
+                            <input onclick = ''" type="button" value="7" class="number">
+                        </div>
+                        <div class="sub-row number">
+                            <input onclick = ''" type="button" value="8" class="number">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="sub-row number">
+                            <input onclick = ''" type="button" value="4" class="number">
+                        </div>
+                        <div class="sub-row number">
+                            <input onclick = ''" type="button" value="5" class="number">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="sub-row number">
+                            <input onclick = ''" type="button" value="1" class="number">
+                        </div>
+                        <div class="sub-row number">
+                            <input onclick = ''" type="button" value="2" class="number">
+                        </div>
+                    </div>
+                    <div class="row number">
+                        <input onclick = ''" type="button" value="0" class="number">
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <div class="sub-col">
+                        <div class="sub-col-button">
+                            <input onclick = ''" type="button" value="/" class="operator">
+                        </div>
+                        <div class="sub-col-button number" >
+
+                        </div>
+                        <div class="sub-col-button">
+                            <input onclick = ''" type="button" value="9" class="number">
+                        </div>
+                        <div class="sub-col-button">
+                            <input onclick = ''" type="button" value="6" class="number">
+                        </div>
+                        <div class="sub-col-button">
+                            <input onclick = ''" type="button" value="3" class="number">
+                        </div>
+                        <div class="sub-col-button">
+                            <input onclick = ''" type="button" value="." class="number">
+                        </div>
+                    </div>
+                    <div class="sub-col">
+                        <div class="sub-col-button">
+                            <input onclick = ''" type="button" value="x" class="operator">
+                        </div>
+                        <div class="sub-col-button">
+                            <input onclick = ''" type="button" value="-" class="operator">
+                        </div>
+                        <div class="sub-col-button">
+                            <input onclick = ''" type="button" value="+" class="operator">
+                        </div>
+                        <div class="sub-col-button">
+                            <input onclick = ''" type="button" value="=" class="equal-btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
