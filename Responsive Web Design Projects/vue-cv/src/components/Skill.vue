@@ -7,7 +7,7 @@
                 <p class="content">
                     - Soft Skills
                 </p>
-                <div class="row">
+                <div class="row  animated bounceInLeft delay-0.1s">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
                         val="60" 
@@ -19,7 +19,7 @@
                         text-fg-color="#ffffff"/>
                     <p class="percent"><strong>N3 / N1</strong></p>
                 </div>
-                  <div class="row">
+                  <div class="row animated bounceInLeft delay-1s">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
                         val="70" 
@@ -31,7 +31,7 @@
                         text-fg-color="#ffffff"/>
                     <p class="percent"><strong>70%</strong></p>
                 </div>
-                <div class="row">
+                <div class="row animated bounceInLeft delay-2s">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
                         val="70" 

@@ -1,9 +1,9 @@
 <template>
     <div class="nav">
         <ul>
-            <li class="link"><a href="#home">Home</a></li>
-            <li class="link"><a href="#about">About</a></li>
-            <li class="link"><a href="#skill">Skill & Experence</a></li>
+            <li class="link"><a href="#home" v-smooth-scroll v-on:click="getActive($event)">Home</a></li>
+            <li class="link"><a href="#about" v-smooth-scroll v-on:click="getActive($event)">About</a></li>
+            <li class="link"><a href="#skill" v-smooth-scroll v-on:click="getActive($event)">Skill & Experence</a></li>
             <li class="link"><a href="#">Contact</a></li>
             <li class="link icons"><custom-icon name="settings" base-class="custom-icon"/></li>
         </ul>
@@ -11,7 +11,13 @@
 </template>
 <script>
 import customIcon from 'vue-icon/lib/vue-feather.esm'
-    export default{
+export default {
+        name: 'Navbar',
+        props:{
+            home_active: false,
+            about_active: false,
+            skill_active: false,
+        },
         components: {
             customIcon
         },
@@ -19,7 +25,28 @@ import customIcon from 'vue-icon/lib/vue-feather.esm'
             return {
                 baseClass: 'v-icon'
             }
-        }
+        },
+        methods: {
+            getActive: function(event){
+                let targetId = event.currentTarget.href;
+                let nameId = targetId.substring(26,targetId.length);
+                if(nameId === 'home'){
+                    this.home_active = true;
+                    this.about_active = false;
+                    this.skill_active = false;
+                }
+                else if(nameId === 'about'){
+                    this.home_active = false;
+                    this.about_active = true;
+                    this.skill_active = false;
+                }
+                else{
+                    this.home_active = false;
+                    this.about_active = false;
+                    this.skill_active = true;
+                }
+            }
+        },
     }
 </script>
 <style scoped>

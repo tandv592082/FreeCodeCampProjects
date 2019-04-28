@@ -1,28 +1,28 @@
 <template>
-    <div id="home">
-        <div class="bio">
-            <div class="avatar">
-                <img class="avatar-image" src="../assets/avatar.png" alt="avatar">
-            </div>
-            <h1 class="text-info">DO THI NGOC HUYEN</h1>
-            <h4 class="text-job">a student at  <v-icon name="heart" base-class="custom-icon"></v-icon> <a href="http://www.hanu.vn/vn/" target="_blank">HANU</a></h4>
-            <div class="social">
-                <a class="icon-social" href="https://www.facebook.com/ngochuyen.hanu">
-                    <v-icon class="icon2" name="facebook"/>
-                </a>
-                <a class="icon-social" href="https://www.instagram.com/ngochuyen_aries/">
-                    <v-icon class="icon2" name="instagram"/>
-                </a>
-                <a class="icon-social" href="https://gmail.com">
-                    <v-icon class="icon2" name="mail"/>
-                </a>
-            </div>
-            <img class="sign" src="../assets/sign.png" alt="sign">
-            <button class="download-cv">Download my CV</button>
+    <div show="show" id="home">
+    <div class="bio">
+        <div class="avatar">
+            <img class="avatar-image" src="../assets/avatar.png" alt="avatar">
         </div>
-        <img class="background-image" src="../assets/bg-fixed2.png" alt="background-image" >
         
+        <h1 class="text-info">DO THI NGOC HUYEN</h1>
+        <h4 class="text-job">a student at  <v-icon name="heart" base-class="custom-icon"></v-icon> <a href="http://www.hanu.vn/vn/" target="_blank">HANU</a></h4>
+        <div class="social">
+            <a class="icon-social" href="https://www.facebook.com/ngochuyen.hanu">
+                <v-icon class="icon2" name="facebook"/>
+            </a>
+            <a class="icon-social" href="https://www.instagram.com/ngochuyen_aries/">
+                <v-icon class="icon2" name="instagram"/>
+            </a>
+            <a class="icon-social" href="https://gmail.com">
+                <v-icon class="icon2" name="mail"/>
+            </a>
+        </div>
+        <img class="sign" src="../assets/sign.png" alt="sign">
+        <button class="download-cv">Download my CV</button>
     </div>
+    <img class="background-image" src="../assets/sign.png" alt="background-image" >   
+</div>
 </template>
 <script>
 import customIcon from 'vue-icon/lib/vue-feather.esm'

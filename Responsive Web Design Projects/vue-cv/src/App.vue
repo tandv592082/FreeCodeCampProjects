@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <navbar/>
-    <home/>
-    <about/>
-    <skill/>
+    <home />
+    <about />
+    <skill />
   </div>
 </template>
 
@@ -14,6 +14,7 @@ import about from './components/About'
 import skill from './components/Skill'
 export default {
   name: 'App',
+  
   components: {
     navbar,
     home,
