@@ -4,6 +4,8 @@
     <home />
     <about />
     <skill />
+    <contact />
+    <copyr/>
   </div>
 </template>
 
@@ -12,6 +14,8 @@ import navbar from './components/Navbar'
 import home from './components/Home'
 import about from './components/About'
 import skill from './components/Skill'
+import contact from './components/Contact'
+import copyr from './components/Footer'
 export default {
   name: 'App',
   
@@ -19,7 +23,9 @@ export default {
     navbar,
     home,
     about,
-    skill
+    skill,
+    contact,
+    copyr
   }
 }
 </script>

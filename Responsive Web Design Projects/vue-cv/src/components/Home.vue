@@ -5,7 +5,7 @@
             <img class="avatar-image" src="../assets/avatar.png" alt="avatar">
         </div>
         
-        <h1 class="text-info">DO THI NGOC HUYEN</h1>
+        <h1 class="text-info">HUYEN DO THI NGOC</h1>
         <h4 class="text-job">a student at  <v-icon name="heart" base-class="custom-icon"></v-icon> <a href="http://www.hanu.vn/vn/" target="_blank">HANU</a></h4>
         <div class="social">
             <a class="icon-social" href="https://www.facebook.com/ngochuyen.hanu">
@@ -82,7 +82,7 @@ import customIcon from 'vue-icon/lib/vue-feather.esm'
     cursor: pointer;
 }
 .download-cv:hover{
-    border: 1px solid red;
+    border: 1px solid rgb(235, 39, 39);
     background-color: rgba(255, 0, 0, 0);
     transition: 500ms
 }

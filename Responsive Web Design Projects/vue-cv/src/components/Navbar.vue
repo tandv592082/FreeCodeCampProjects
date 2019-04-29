@@ -4,7 +4,7 @@
             <li class="link"><a href="#home" v-smooth-scroll v-on:click="getActive($event)">Home</a></li>
             <li class="link"><a href="#about" v-smooth-scroll v-on:click="getActive($event)">About</a></li>
             <li class="link"><a href="#skill" v-smooth-scroll v-on:click="getActive($event)">Skill & Experence</a></li>
-            <li class="link"><a href="#">Contact</a></li>
+            <li class="link"><a href="#contact" v-smooth-scroll v-on:click="getActive($event)">Contact</a></li>
             <li class="link icons"><custom-icon name="settings" base-class="custom-icon"/></li>
         </ul>
     </div>

@@ -6,6 +6,7 @@ import feather from 'vue-icon'
 import Transitions from 'vue2-transitions'
 import animate from 'animate.css'
 import vueSmoothScroll from 'vue2-smooth-scroll'
+
 Vue.use(vueSmoothScroll)
 Vue.use(animate)
 Vue.use(Transitions)
