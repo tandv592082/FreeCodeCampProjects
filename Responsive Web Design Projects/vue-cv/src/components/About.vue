@@ -3,7 +3,7 @@
         <h1 class="text-about">ABOUT</h1>
         <div class="information">
             <div class="column">
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="500">
                     <div class="wrap">
                          <v-icon name="circle" base-class="custom-icon"/>
                          <p class="ps" for="bio"><strong>FullName</strong></p>
@@ -11,14 +11,14 @@
                     
                     <p class="bio-text" name="bio">: Do Thi Ngoc Huyen</p>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="600">
                     <div class="wrap">
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Gender</strong></p>
                     </div>
                     <p class="bio-text" name="bio">: Famale</p>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="700">
                     <div class="wrap">
                          <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Age</strong></p>
@@ -26,42 +26,42 @@
                     <p class="bio-text" name="bio">: 20</p> 
                 </div>
                
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="800">
                     <div class="wrap">
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Date Of Birth</strong></p>
                     </div>
                     <p class="bio-text" name="bio">: 1999 / 4 / 3</p>
                 </div>
-                 <div class="row">
+                 <div class="row" data-aos="fade-right" data-aos-duration="900">
                     <div class="wrap">
                          <v-icon name="circle" base-class="custom-icon"/>
                             <p class="ps" for="bio"><strong>Height</strong> </p>
                     </div>
                     <p class="bio-text" name="bio">: 1m57</p>
                 </div>
-                 <div class="row">
+                 <div class="row" data-aos="fade-right" data-aos-duration="1000">
                     <div class="wrap">
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Weight</strong></p>
                     </div>
                     <p class="bio-text" name="bio">: 54kg</p>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="1100">
                     <div class="wrap">
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Eye Color</strong></p>
                     </div>
                     <p class="bio-text" name="bio">: Black</p>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="1200">
                    <div class="wrap">
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Hair Color</strong></p>
                    </div>
                     <p class="bio-text" name="bio">: Black</p>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="1300">
                    <div class="wrap mobile">
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Language</strong></p>
@@ -71,7 +71,7 @@
                 
             </div>
             <div class="column">
-                <div class="row2">
+                <div class="row2"  data-aos="fade-right" data-aos-duration="1400">
                    <div class="wrap">
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Hobby</strong></p>
@@ -82,14 +82,14 @@
                                                     I volunteer because it continuously teaches me something new about people, about cooperation, about compassion, and about myself.
                                                     </p>
                 </div>
-                <div class="row2">
+                <div class="row2"  data-aos="fade-right" data-aos-duration="1500">
                    <div class="wrap">
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Weekness</strong></p>
                    </div>
                     <p class="content" name="bio">I don't like watching horror movies</p>
                 </div>
-                <div class="row2">
+                <div class="row2"  data-aos="fade-right" data-aos-duration="1600">
                    <div class="wrap">
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Special Skills</strong></p>

@@ -7,7 +7,7 @@
                 <p class="content">
                      Soft Skills
                 </p>
-                <div class="row  animated bounceInLeft delay-0.1s">
+                <div class="row" data-aos="fade-right" data-aos-duration="500">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
                         val="60" 
@@ -19,7 +19,7 @@
                         text-fg-color="#ffffff"/>
                     <p class="percent"><strong>N3 / N1</strong></p>
                 </div>
-                  <div class="row animated bounceInLeft delay-1s">
+                  <div class="row" data-aos="fade-right" data-aos-duration="650">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
                         val="70" 
@@ -31,7 +31,7 @@
                         text-fg-color="#ffffff"/>
                     <p class="percent"><strong>70%</strong></p>
                 </div>
-                <div class="row animated bounceInLeft delay-2s">
+                <div class="row " data-aos="fade-right" data-aos-duration="800">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
                         val="70" 
@@ -43,7 +43,7 @@
                         text-fg-color="#ffffff"/>
                     <p class="percent"><strong>70%</strong></p>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="950">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
                         val="80" 
@@ -57,7 +57,7 @@
                 </div>
               
                 <p class="content"> MS Offices Skill</p>
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="1100">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
                         val="75" 
@@ -69,7 +69,7 @@
                         text-fg-color="#ffffff"/>
                     <p class="percent"><strong>75%</strong></p>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="1250">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
                         val="60" 
@@ -78,10 +78,10 @@
                         title="60%" 
                         size='14'
                         :font-size="14"
-                        text-fg-color="#ffffff"/>
+                        text-fg-color="#ffffff" />
                     <p class="percent"><strong>60%</strong></p>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-right" data-aos-duration="1400">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
                         val="60" 
@@ -100,10 +100,10 @@
                 <div class="history">
                     <div class="time-leap">
                         <div class="half">
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
+                            <div class="dot"  data-aos="fade-down"></div>
+                            <div class="dot"  data-aos="fade-down"></div>
+                            <div class="dot"  data-aos="fade-down"></div>
+                            <div class="dot"  data-aos="fade-down"></div>
                         </div>
                         <div class="half"></div>
                     </div>
@@ -229,7 +229,7 @@ export default {
     height: 15px;
     border-radius: 7.5px;
     background-color: white;
-    left: 100%;
+    left: 75%;
     transform: translateX(-50%);
 }
 
@@ -243,7 +243,7 @@ export default {
     top: 54%;
 }
 .dot:nth-child(4){
-    top: 82%;
+    top: 83%;
 }
 
 @media only screen and (max-width: 900px){
@@ -291,6 +291,9 @@ export default {
     .experence{
         width: 85%;
         margin-left: 10px;
+    }
+    .dot{
+        left: 50%;
     }
     .dot:nth-child(1){
         top: -5px;

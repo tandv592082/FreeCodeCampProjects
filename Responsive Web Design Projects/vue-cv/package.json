@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "animate.css": "^3.7.0",
+    "aos": "^3.0.0-beta.6",
     "sweetalert2": "^8.9.0",
     "vue": "^2.5.2",
     "vue-icon": "^2.1.1",

@@ -4,13 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import feather from 'vue-icon'
 import Transitions from 'vue2-transitions'
-import animate from 'animate.css'
+
 import vueSmoothScroll from 'vue2-smooth-scroll'
 import VueResource from 'vue-resource'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
 Vue.use(VueResource);
 Vue.use(vueSmoothScroll)
-Vue.use(animate)
+
 Vue.use(Transitions)
 Vue.use(feather, 'v-icon')
 Vue.config.productionTip = false
@@ -22,6 +25,9 @@ Vue.http.headers.common['Access-Control-Allow-Origin'] = '*'
 Vue.http.options.xhr = {withCredentials: true};
 /* eslint-disable no-new */
 new Vue({
+  created() {
+    AOS.init();
+  },
   el: '#app',
   components: { App },
   template: '<App/>'
