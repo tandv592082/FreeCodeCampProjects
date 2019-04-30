@@ -4,8 +4,7 @@
         <div class="avatar">
             <img class="avatar-image" src="../assets/avatar.png" alt="avatar">
         </div>
-        
-        <h1 class="text-info">HUYEN DO THI NGOC</h1>
+        <h2 class="text-info">HUYEN DO THI NGOC</h2>
         <h4 class="text-job">a student at  <v-icon name="heart" base-class="custom-icon"></v-icon> <a href="http://www.hanu.vn/vn/" target="_blank">HANU</a></h4>
         <div class="social">
             <a class="icon-social" href="https://www.facebook.com/ngochuyen.hanu">
@@ -18,10 +17,11 @@
                 <v-icon class="icon2" name="mail"/>
             </a>
         </div>
-        <img class="sign" src="../assets/sign.png" alt="sign">
         <button class="download-cv">Download my CV</button>
     </div>
-    <img class="background-image" src="../assets/sign.png" alt="background-image" >   
+    <div class="wrap-image">
+        <img class="ex" src="../assets/bg-remix.png" alt="bio">
+    </div>  
 </div>
 </template>
 <script>
@@ -61,20 +61,21 @@ import customIcon from 'vue-icon/lib/vue-feather.esm'
 
 .bio{
     float: left;
-    width: 80%;
+    width: 100%;
     background:linear-gradient(to right, rgb(255, 114, 114), #7C5098) ;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     display: flex;
     flex-direction: column;
+
 }
 
 .download-cv{
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 25px;
     color: white;
     font-family: 'Open Sans', sans-serif;
-    height: 50px;
+    height: 40px;
     width: 180px;
     border: none;
     border-radius:25px;
@@ -90,32 +91,28 @@ import customIcon from 'vue-icon/lib/vue-feather.esm'
 .avatar{
     width: 100%;
     height: 45%;
+    margin-bottom:20px;
 }
 .infor{
     flex-grow: 1;
 }
 
-.sign{
-    margin: 0 auto;
-    width: 160px;
-    height: 80px;
-}
+
 .social{
     width: 50%;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 .icon-social{
-    width: 30px;
+    width: 24px;
 }
 .icon-social v-icon{
     width: 300px;
 }
 .text-info{
-    top: 0;
     color: wheat;
 }
 .text-job{
@@ -136,15 +133,31 @@ import customIcon from 'vue-icon/lib/vue-feather.esm'
     margin-top: 20px;
     
 }
-.background-image{
-   
-    z-index: 0;
-    float: right;
-    width: 70vw;
-    height: 100%;
+
+.wrap-image{
+    width: 100%;
+    overflow: hidden;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    background-color: red;
+    padding: 0;
+    margin: 0;
+
+    
+}
+.ex{
+    height: 100%;
+    width: 100%
+}
+.wrap-image img{ 
+
+    transition: transform .5s, filter 1.5s ease-in-out;
+    filter: grayscale(100%);
 }
 
+.wrap-image:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
 
 </style>

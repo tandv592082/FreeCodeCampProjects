@@ -2,15 +2,15 @@
     <div id="contact">
         <h1 class="text-contact">Contact Me</h1>
         <div class="contact">
-            <form action="submit" class="send-mail">
+            <form @submit.prevent="submit" class="send-mail">
                 <div class="wrap-all">
                     <div class="name-and-mail">
-                        <input type="text" class="input first" name="name" placeholder="Name">
-                        <input type="email" class="input first" name="email" placeholder="Email">
+                        <input required type="text" class="input first" @input='updateVal' :name="name" placeholder="Name">
+                        <input required type="email" class="input first" @input='updateVal' :v-model="email"  placeholder="Email">
                     </div>
-                    <input type="text" class="input" name="subject" placeholder="Subject">
-                    <textarea class="text-area" name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    <button type="submit" class="submit">Submit</button>
+                    <input required type="text" class="input" @input='updateVal' :v-model="subject"  placeholder="Subject">
+                    <textarea required class="text-area" @input='updateVal' :v-model="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button class="submit" @click="submit">Submit</button>
                 </div>
             </form>
             <div class="information">
@@ -34,8 +34,8 @@
                                 </a>
                             </div>
                     </div>
-                    <div class="map">
-
+                    <div class="sign">
+                        <img class="sign-img" src="../assets/sign.png" alt="sign">
                     </div>
             </div>
         </div>
@@ -46,22 +46,31 @@ import customIcon from 'vue-icon/lib/vue-feather.esm'
 
 
 export default {
+
     components: {
         customIcon
     },
+    props:{
+        name: String,
+        email: String,
+        subject: String,
+        message: String
+    },
     data: function () {
         return {
-            baseClass: 'v-icon'
+            baseClass: 'v-icon',
+           
         }
     },
-    mounted: function() {
-        console.log("map: ", google.maps)
-            this.map = new google.maps.Map(document.getElementsByClassName('map'), {
-            center: {lat:61.180059, lng: -149.822075},
-            scrollwheel: false,
-            zoom: 4
-            })
-  }
+    methods:{
+        updateVal: function(val){
+           this.$emit('input', val);
+        }
+        ,
+        submit(event){
+            console.log(this.name)
+        }
+    }
 }
 
 </script>
@@ -186,7 +195,7 @@ export default {
     text-align: start;
 }
 
-.map{
+.sign{
     width: 100%;
 }
 
@@ -210,6 +219,13 @@ h3{
     flex-direction: row;
 }
 
+
+.sign-img{
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 35%;
+}
 .icon-social{
     width: 24px;
     color: white;
