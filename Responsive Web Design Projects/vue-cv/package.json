@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
+    "sweetalert2": "^8.9.0",
     "vue": "^2.5.2",
     "vue-icon": "^2.1.1",
+    "vue-resource": "^1.5.1",
     "vue-simple-progress": "^1.1.0",
     "vue2-smooth-scroll": "^1.0.5",
     "vue2-transitions": "^0.3.0"

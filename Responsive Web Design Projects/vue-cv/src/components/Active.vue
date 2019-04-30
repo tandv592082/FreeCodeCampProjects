@@ -7,9 +7,9 @@
             <div class="triangle">
             </div>
             <div class="text-content">
-               {{content}}
+               <p class="text">{{content}}</p>
                <div v-if="hasLink">
-                   You can join us at <a href="link">{{link.substring(8,link.length-1)}}</a>
+                  <p class="text"> You can join us at <a href="link">{{link.substring(8,link.length-1)}}</a></p>
                </div>
             </div>
         </div>
@@ -55,6 +55,11 @@ export default {
     display: flex;
     flex-direction: row;
 }
+.text{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 5px;
+    }
 .triangle{
       width: 0;
       height: 0;
@@ -89,5 +94,32 @@ a{
 a:hover{
     color: rgb(0, 0, 175);
     transition: 500ms;
+}
+@media only screen and (max-width: 900px){
+    .act-sub{
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .date{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .text-content{
+        font-size: 14px;
+        width: 100%;
+        word-break: break-word;
+        text-align: start;
+
+        min-height: 30px;
+        margin-bottom: 10px;
+    }
+    .text{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 5px;
+    }
 }
 </style>

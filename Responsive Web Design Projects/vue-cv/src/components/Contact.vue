@@ -16,7 +16,7 @@
             <div class="information">
                     <div class="all-info">
                             <div class="address">
-                                <h3>HUYEN DO THI NGOC</h3>
+                                <h3 class="mobile">HUYEN DO THI NGOC</h3>
                                 <p class='text-name'>STUDENT</p>
                                 <p class='text-name'><strong>Phone : </strong> 0868 700 728</p>
                                 <p class='text-name'><strong>Email : </strong> do.t.ngochuyen@gmail.com</p>
@@ -35,7 +35,7 @@
                             </div>
                     </div>
                     <div class="sign">
-                        <img class="sign-img" src="../assets/sign.png" alt="sign">
+                         <img class="sign-img" src="../assets/sign.png" alt="sign">
                     </div>
             </div>
         </div>
@@ -162,6 +162,7 @@ export default {
     width: 100%;
     padding-right: 15px;
     cursor: pointer;
+    font-size: 20px;
     border: 1px solid rgb(255, 255, 255, 0.712);
     color: rgb(235, 39, 39);
     font-size: 14px;
@@ -174,9 +175,10 @@ export default {
     flex-direction: row;
 }
 .submit:hover{
-    border: 1px solid red;
+    border: 1px solid white;
     background-color: rgba(255, 0, 0, 0);
     transition: 500ms;
+    color:white;
 }
 
 
@@ -233,5 +235,92 @@ h3{
 }
 .icon-social:nth-child(1){
     margin-left: 0px;
+}
+
+@media only screen and (max-width: 900px) {
+    .text-contact{
+        color: rgb(192, 44, 44);
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    #contact{
+        background:linear-gradient(to right, rgb(255, 170, 114), rgb(181, 123, 218)) ;
+        margin: 10px;
+        margin-bottom: 20px;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        width: 100%;
+        border-top: 1px solid rgba(245, 245, 245, 0.315);
+    }
+    .wrap-all{
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .send-mail{
+        padding: 0px;
+        margin-top: 15px;
+    }
+    .input::placeholder{
+        color: rgb(143, 0, 0);
+    }
+    .text-area::placeholder{
+        color: rgb(143, 0, 0);
+    }
+    .input,.text-area{
+        color: rgb(61, 0, 0)
+    }
+    .submit{
+        color: rgb(61, 0, 0);
+    }
+    .all-info{
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+    .address{
+        height: 80%;
+        border-bottom: 1px solid rgba(245, 245, 245, 0.315);
+        float: left;
+        text-align: start;
+        margin-bottom: 10px;
+    }
+    .mobile{
+        font-size: 16px;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .sign{
+        width: 50%;
+    }
+    .text-name{
+        font-size: 14px;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 8px;
+    }
+    .information{
+        border-top: 1px solid rgba(245, 245, 245, 0.315);
+        margin-top: 10px;
+    }
+    .social{
+        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        top: 10px;
+    }
+    .sign-img{
+        width: 100px;
+        height: 50px;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-100%)
+    }
 }
 </style>

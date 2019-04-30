@@ -5,7 +5,7 @@
         <div class="skill-wrap">
             <div class="skill">
                 <p class="content">
-                    - Soft Skills
+                     Soft Skills
                 </p>
                 <div class="row  animated bounceInLeft delay-0.1s">
                     <progress-bar class="pro"
@@ -56,7 +56,7 @@
                     <p class="percent"><strong>80%</strong></p>
                 </div>
               
-                <p class="content">- MS Offices Skill</p>
+                <p class="content"> MS Offices Skill</p>
                 <div class="row">
                     <progress-bar class="pro"
                         bar-color="#10bb00" 
@@ -244,5 +244,65 @@ export default {
 }
 .dot:nth-child(4){
     top: 82%;
+}
+
+@media only screen and (max-width: 900px){
+    #skill{
+        border-radius: 8px;
+        margin: 10px;
+    }
+    .text-skill{
+        color: rgb(192, 44, 44);
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .skill-wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .row{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .skill{
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+    }
+    .percent{
+        margin-left: 15px;
+        vertical-align: bottom;
+        color: white;
+        margin-top: 21px;
+        font-size: 12px;
+    }
+    .vue-simple-progress-bar{
+        border-radius: 10px;
+    }
+    .experence{
+        width: 85%;
+        margin-left: 10px;
+    }
+    .dot:nth-child(1){
+        top: -5px;
+    }
+    .dot:nth-child(2){
+        top: 22%;
+    }
+    .dot:nth-child(3){
+        top: 56%;
+    }
+    .dot:nth-child(4){
+        top: 84%;
+    }
 }
 </style>

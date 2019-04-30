@@ -62,7 +62,7 @@
                     <p class="bio-text" name="bio">: Black</p>
                 </div>
                 <div class="row">
-                   <div class="wrap">
+                   <div class="wrap mobile">
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Language</strong></p>
                    </div>
@@ -221,6 +221,52 @@ p{
     width: 50%;
     margin-bottom: 40px;
 }
+@media only screen and (max-width: 900px) {
+    .information{
+        display: flex;
+        flex-direction: column;
+    }
+    #about{
+        border-radius: 8px;
+        margin: 10px;
+        margin-bottom: 0px;
+    }
+    .text-about{
+        color: rgb(192, 44, 44);
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .ps{
+        font-size: 14px;
+        text-align: start;
+    }
+    .bio-text{
+        font-size: 14px;
+        padding: 0px;
+        margin: 0;
+        text-align: start;
 
+    }
+    .wrap{
+        width: 40%;
+    }
+    
+    .row{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .mobile{
+        width: 33%
+    }
+    .row2{
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .content{
+        font-size: 14px;
+    }
+}
 
 </style>

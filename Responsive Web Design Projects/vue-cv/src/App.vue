@@ -34,9 +34,10 @@ export default {
 *{
   top: 0 ;
   right: 0;
+  font-family: 'Open Sans', sans-serif !important;
 }
 #app {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

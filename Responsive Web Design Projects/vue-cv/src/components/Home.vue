@@ -1,40 +1,90 @@
 <template>
     <div show="show" id="home">
-    <div class="bio">
-        <div class="avatar">
-            <img class="avatar-image" src="../assets/avatar.png" alt="avatar">
+        <div class="bio">
+            <div class="avatar">
+                <img class="avatar-image" src="../assets/avatar.png" alt="avatar">
+            </div>
+            <h2 class="text-info">HUYEN DO THI NGOC</h2>
+            <h4 class="text-job">a student at  <v-icon name="heart" base-class="custom-icon"></v-icon> <a href="http://www.hanu.vn/vn/" target="_blank">HANU</a></h4>
+            <div class="social">
+                <a class="icon-social" href="https://www.facebook.com/ngochuyen.hanu">
+                    <v-icon class="icon2" name="facebook"/>
+                </a>
+                <a class="icon-social" href="https://www.instagram.com/ngochuyen_aries/">
+                    <v-icon class="icon2" name="instagram"/>
+                </a>
+                <a class="icon-social" href="https://gmail.com">
+                    <v-icon class="icon2" name="mail"/>
+                </a>
+            </div>
+            <button class="download-cv" @click="selectCV()">Download my CV</button>
         </div>
-        <h2 class="text-info">HUYEN DO THI NGOC</h2>
-        <h4 class="text-job">a student at  <v-icon name="heart" base-class="custom-icon"></v-icon> <a href="http://www.hanu.vn/vn/" target="_blank">HANU</a></h4>
-        <div class="social">
-            <a class="icon-social" href="https://www.facebook.com/ngochuyen.hanu">
-                <v-icon class="icon2" name="facebook"/>
-            </a>
-            <a class="icon-social" href="https://www.instagram.com/ngochuyen_aries/">
-                <v-icon class="icon2" name="instagram"/>
-            </a>
-            <a class="icon-social" href="https://gmail.com">
-                <v-icon class="icon2" name="mail"/>
-            </a>
-        </div>
-        <button class="download-cv">Download my CV</button>
+        <div class="wrap-image">
+            <img class="ex" src="../assets/bg-remix.png" alt="bio">
+        </div>  
     </div>
-    <div class="wrap-image">
-        <img class="ex" src="../assets/bg-remix.png" alt="bio">
-    </div>  
-</div>
 </template>
 <script>
 import customIcon from 'vue-icon/lib/vue-feather.esm'
+import Swal from 'sweetalert2'
     export default{
         components: {
             customIcon
         },
         data: function () {
             return {
-                baseClass: 'v-icon'
+                baseClass: 'v-icon',
+                url:'https://78.media.tumblr.com/tumblr_m39nv7PcCU1r326q7o1_500.png'
             }
-        }
+        },
+        methods: {
+            selectCV:async  function(){        
+                const {value: lang} =await Swal.fire({
+                title: 'Select language',
+                input: 'select',
+                inputOptions: {
+                    'Japanese': 'Japanese',
+                    'Vietnamese': 'Vietnamese',
+                    'English': 'English',
+                },
+                inputPlaceholder: 'Select a language',
+                showCancelButton: true,
+                inputValidator: (value) => {
+                    return new Promise((resolve) => {
+                    if (value !== '') {
+                        resolve()
+                    } else {
+                        resolve('You need to select language to download!')
+                    }
+                    })
+                }
+                })
+
+                if (lang) {
+                    Swal.fire('You selected: ' + lang)
+                    this.downloadWithVueResource()
+                }
+            },
+            // forceFileDownload(response){
+            //     const url = window.URL.createObjectURL(new Blob([response.data]))
+            //     const link = document.createElement('a')
+            //     link.href = url
+            //     link.setAttribute('download', 'file.png') //or any other extension
+            //     document.body.appendChild(link)
+            //     link.click()
+            // },
+            // downloadWithVueResource() {
+            //     this.$http({
+            //         method: 'get',
+            //         url: this.url,
+            //         responseType: 'arraybuffer'
+            //     })
+            //     .then(response => {
+            //         this.forceFileDownload(response)  
+            //     })
+            //     .catch(() => console.log('error occured'))
+            // }
+        },
 }
 </script>
 <style scoped>
@@ -47,7 +97,7 @@ import customIcon from 'vue-icon/lib/vue-feather.esm'
    display: flex;
    flex-direction: row;
    background-color: white;
-   border-radius: 5px;
+   border-radius: 8px;
    width: auto;
    height: auto;
    margin: 30px;
@@ -139,11 +189,9 @@ import customIcon from 'vue-icon/lib/vue-feather.esm'
     overflow: hidden;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: red;
     padding: 0;
     margin: 0;
-
-    
+    background:linear-gradient(to right, rgb(255, 114, 114), #7C5098) ;    
 }
 .ex{
     height: 100%;
@@ -160,4 +208,64 @@ import customIcon from 'vue-icon/lib/vue-feather.esm'
     transform: scale(1.1);
 }
 
+@media only screen and (max-width: 900px) {
+    #home{
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        width: auto;
+        height: auto;
+        margin: 10px;
+        padding-top: 60px;    
+    }
+    .bio{
+        order: 2;
+        border-radius: 0;
+        top: 0;
+        margin: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .wrap-image{
+        order: 1;
+        border-radius: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .ex{
+        height: 100% !important;
+        border-radius: 0px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    
+    .avatar-image{
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        z-index: 3;
+        top: calc(100vh*290/731);
+        left:50%;
+        transform: translateX(-50%);
+
+    }
+    .text-info{
+        
+        font-size: 18px;
+        font-weight: nomal;
+        padding: 0;
+        margin: 0;
+        margin-top: 70px;
+        margin-bottom: 10px;
+    }
+    .text-job{
+        font-size: 12px;
+        margin-top: 0;
+        padding: 0;
+    }
+    .download-cv{
+      background-color: rgb(179, 42, 42);
+      margin-bottom: 20px;
+    }
+}
 </style>

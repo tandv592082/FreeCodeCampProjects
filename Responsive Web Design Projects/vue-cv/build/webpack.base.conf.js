@@ -77,6 +77,8 @@ module.exports = {
     fs: 'empty',
     net: 'empty',
     tls: 'empty',
+    dns: 'mock',
+    net: 'mock',
     child_process: 'empty'
   }
 }
