@@ -60,7 +60,9 @@ export default {
                     toast: true,
                     position: 'top-end',
                     showConfirmButton: false,
-                    timer: 2000
+                    timer: 2000,
+                    background: '#FFAA74',
+                    
                 });
 
                 Toast.fire({
