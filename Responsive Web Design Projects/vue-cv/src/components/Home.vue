@@ -2,7 +2,7 @@
     <div show="show" id="home">
         <div class="bio">
             <div class="avatar">
-                <img class="avatar-image" src="../assets/avatar.png" alt="avatar">
+                <img class="avatar-image" src="https://i.ibb.co/6WJVrWz/avatar.png" alt="avatar">
             </div>
             <h2 class="text-info">HUYEN DO THI NGOC</h2>
             <h4 class="text-job">a student at  <v-icon name="heart" base-class="custom-icon"></v-icon> <a href="http://www.hanu.vn/vn/" target="_blank">HANU</a></h4>
@@ -20,7 +20,7 @@
             <button class="download-cv" @click="selectCV()">Download my CV</button>
         </div>
         <div class="wrap-image">
-            <img class="ex" src="../assets/bg-remix.png" alt="bio">
+            <img class="ex" src="https://i.ibb.co/BCZNq25/bg-remix.png" alt="bio">
         </div>  
     </div>
 </template>

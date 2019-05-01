@@ -35,7 +35,7 @@
                             </div>
                     </div>
                     <div class="sign">
-                         <img class="sign-img" src="../assets/sign.png" alt="sign">
+                         <img class="sign-img" src="https://i.ibb.co/hB2DHgQ/sign.png" alt="sign">
                     </div>
             </div>
         </div>
