@@ -36,7 +36,6 @@ import Swal from 'sweetalert2'
                 baseClass: 'v-icon',
                 url:{
                     Japanese : 'https://huyen-cv.herokuapp.com/public/huyencv-jp.pdf',
-                    Vietnamese : 'https://huyen-cv.herokuapp.com/public/huyencv-vn.pdf',
                     English : 'https://huyen-cv.herokuapp.com/public/huyencv-en.pdf'
                 }
             }
@@ -48,7 +47,6 @@ import Swal from 'sweetalert2'
                 input: 'select',
                 inputOptions: {
                     'Japanese': 'Japanese',
-                    'Vietnamese': 'Vietnamese',
                     'English': 'English',
                 },
                 inputPlaceholder: 'Select a language',
@@ -245,12 +243,15 @@ import Swal from 'sweetalert2'
     .avatar-image{
         width: 150px;
         height: 150px;
-        position: absolute;
+        position: relative;
         z-index: 3;
-        top: calc(100vh*290/731);
-        left:50%;
-        transform: translateX(-50%);
+        top: -75px;
+        margin: 0 auto;
+    }
 
+    .avatar{
+        height: 100px;
+        margin: 0 auto;
     }
     .text-info{
         
@@ -258,7 +259,6 @@ import Swal from 'sweetalert2'
         font-weight: nomal;
         padding: 0;
         margin: 0;
-        margin-top: 70px;
         margin-bottom: 10px;
     }
     .text-job{
@@ -271,4 +271,5 @@ import Swal from 'sweetalert2'
       margin-bottom: 20px;
     }
 }
+
 </style>

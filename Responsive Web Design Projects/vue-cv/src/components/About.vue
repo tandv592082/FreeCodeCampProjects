@@ -94,7 +94,7 @@
                         <v-icon name="circle" base-class="custom-icon"/>
                         <p class="ps" for="bio"><strong>Special Skills</strong></p>
                    </div>
-                    <p class="content" name="bio">Singging , Swimming , Hiking and Draw</p>
+                    <p class="content" name="bio">Making crafts, studying Japanese, doing exercises, volunteering and joining extracurricular activities</p>
                 </div>
             </div>
         </div>

@@ -356,4 +356,10 @@ h3{
         transform: translateY(-100%)
     }
 }
+@media only screen and (max-width: 320px){
+    .sign-img{
+        width: 80px;
+        height: 40px;
+    }
+}
 </style>

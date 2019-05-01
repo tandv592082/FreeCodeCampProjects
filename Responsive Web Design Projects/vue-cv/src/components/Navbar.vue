@@ -200,30 +200,7 @@ a:hover{
     margin-left: 20px;
 }
 
-@media only screen and (max-width: 900px) {
-    .link{
-        width: 60px;
-    }
-    .lang{
-        right: 40px;
-        font-size: 13px;
-        top: 10px;
-    }
-    a{
-        font-size: 13px;
-    }
-    .link:nth-child(3){
-        width: 120px;
-    }
-    .custom-icon {
-        width: 13px;
-        color: #E74761;
-        cursor: pointer;
-    }
-    .icons{
-        width: 40px;
-    }
-}
+
 
 @media only screen and (max-width: 900px) {
     .link{
@@ -288,5 +265,36 @@ a:hover{
     }
 }
 
+
+
+@media only screen and (max-width: 360px){
+        .link{
+            width: 50px;
+            font-size: 10px;
+        }
+        a{
+            font-size: 12px;
+        }
+        .custom-icon{
+            width: 11px;
+        }
+        .lang{
+            right: 15px;
+            font-size: 12px;
+            top: 7px;
+        }
+}
+
+@media only screen and (max-width: 320px){
+    .link{
+        width: 40px;
+        font-size: 10px;
+    }
+    .lang{
+            right: 12px;
+            font-size: 12px;
+            top: 7px;
+    }
+}
 
 </style>
