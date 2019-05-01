@@ -2,15 +2,15 @@
     <div id="contact">
         <h1 class="text-contact">Contact Me</h1>
         <div class="contact">
-            <form @submit.prevent="submit" class="send-mail">
+            <form v-on:submit.prevent="submit" class="send-mail">
                 <div class="wrap-all">
                     <div class="name-and-mail">
-                        <input required type="text" class="input first" @input='updateVal' :name="name" placeholder="Name">
-                        <input required type="email" class="input first" @input='updateVal' :v-model="email"  placeholder="Email">
+                        <input v-model="send.name" required type="text" class="input first"   placeholder="Name">
+                        <input v-model="send.email" required type="email" class="input first"    placeholder="Email">
                     </div>
-                    <input required type="text" class="input" @input='updateVal' :v-model="subject"  placeholder="Subject">
-                    <textarea required class="text-area" @input='updateVal' :v-model="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    <button class="submit" @click="submit">Submit</button>
+                    <input required type="text" v-model="send.subject" class="input"  placeholder="Subject">
+                    <textarea v-model = "send.text" required class="text-area"   id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button class="submit" type="submit">Submit</button>
                 </div>
             </form>
             <div class="information">
@@ -43,7 +43,7 @@
 </template>
 <script>
 import customIcon from 'vue-icon/lib/vue-feather.esm'
-
+import Swal from 'sweetalert2'
 
 export default {
 
@@ -59,16 +59,49 @@ export default {
     data: function () {
         return {
             baseClass: 'v-icon',
+            send: {},
+            url: 'https://huyen-cv.herokuapp.com/api/sendmail'
            
         }
     },
     methods:{
-        updateVal: function(val){
-           this.$emit('input', val);
-        }
-        ,
-        submit(event){
-            console.log(this.name)
+        
+        async submit(){
+            let timerInterval
+            Swal.fire({
+                title: "",
+                text: "Please wait a few second...",
+                showConfirmButton: false
+            }) 
+            await this.$http.post(this.url, this.send)
+                    .then(respone => {
+                        console.log('ok')
+                        Swal.close()
+                        if(respone.data.success){
+                            Swal.fire({
+                            position: 'center',
+                            type: 'success',
+                            title: 'Your message has been sent ! I will reply you soon !',
+                            showConfirmButton: false,
+                            timer: 2000
+                            })
+                        }
+                        else{
+                            Swal.fire({
+                                type: 'error',
+                                title: 'Oops...',
+                                text: 'Something went wrong! Please check your data!',
+                            })
+                        }
+                    })
+                    .catch(err => {
+                        Swal.close()
+                         Swal.fire({
+                                type: 'error',
+                                title: 'Oops...',
+                                text: 'Something went wrong! Please check your network!',
+                            })
+                    })     
         }
     }
 }
