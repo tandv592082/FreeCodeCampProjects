@@ -34,7 +34,7 @@ import Swal from 'sweetalert2'
         data: function () {
             return {
                 baseClass: 'v-icon',
-                url:'https://78.media.tumblr.com/tumblr_m39nv7PcCU1r326q7o1_500.png'
+                url:'http://localhost:8080/public/huyencv-jp.pdf'
             }
         },
         methods: {
@@ -65,25 +65,25 @@ import Swal from 'sweetalert2'
                     this.downloadWithVueResource()
                 }
             },
-            // forceFileDownload(response){
-            //     const url = window.URL.createObjectURL(new Blob([response.data]))
-            //     const link = document.createElement('a')
-            //     link.href = url
-            //     link.setAttribute('download', 'file.png') //or any other extension
-            //     document.body.appendChild(link)
-            //     link.click()
-            // },
-            // downloadWithVueResource() {
-            //     this.$http({
-            //         method: 'get',
-            //         url: this.url,
-            //         responseType: 'arraybuffer'
-            //     })
-            //     .then(response => {
-            //         this.forceFileDownload(response)  
-            //     })
-            //     .catch(() => console.log('error occured'))
-            // }
+            forceFileDownload(response){
+                const url = window.URL.createObjectURL(new Blob([response.data]))
+                const link = document.createElement('a')
+                link.href = url
+                link.setAttribute('download', 'NgocHuyen-CV.pdf') //or any other extension
+                document.body.appendChild(link)
+                link.click()
+            },
+            downloadWithVueResource() {
+                this.$http({
+                    method: 'get',
+                    url: this.url,
+                    responseType: 'arraybuffer'
+                })
+                .then(response => {
+                    this.forceFileDownload(response)  
+                })
+                .catch(() => console.log('error occured'))
+            }
         },
 }
 </script>
